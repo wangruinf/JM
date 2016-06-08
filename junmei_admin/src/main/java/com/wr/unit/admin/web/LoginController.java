@@ -37,8 +37,15 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String fail(@RequestParam(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM) String userName, Model model) {
-		model.addAttribute(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM, userName);
-        log.info(userName);
+        try {
+            Subject subject = SecurityUtils.getSubject();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        model.addAttribute(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM, userName);
+
 		return "login";
 	}
 

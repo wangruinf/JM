@@ -102,11 +102,15 @@
         <appender-ref ref="DB" />
     </logger-->
 
-    <logger name="org.springframework" level="INFO ERROR debug trace" >
+    <!--logger name="org.springframework" level="INFO ERROR debug trace" >
         <appender-ref ref="console" />
-    </logger>
+    </logger -->
 
-    <logger name="org.apache.shiro" level="INFO ERROR debug trace" >
+    <!--logger name="org.apache.shiro" level="INFO ERROR debug trace" >
+        <appender-ref ref="console" />
+    </logger -->
+
+	<logger name="com.wr.unit" level="INFO ERROR debug trace" >
         <appender-ref ref="console" />
     </logger>
 
